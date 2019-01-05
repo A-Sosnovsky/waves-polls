@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  waves-polls:
+    container_name: waves-polls-client
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
