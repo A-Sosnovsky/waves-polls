@@ -1,4 +1,4 @@
-import {MuiThemeProvider} from '@material-ui/core/styles';
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import * as React from 'react';
 import createTheme from './Theme';
 
